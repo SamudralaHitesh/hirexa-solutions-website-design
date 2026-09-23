@@ -1,0 +1,13 @@
+{
+  "name": "hirexa-solutions-redesign",
+  "version": "2.0.0",
+  "description": "Next-Generation Redesign for Hirexa Solutions - Enterprise Staffing, GCC, and Software Engineering",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}
