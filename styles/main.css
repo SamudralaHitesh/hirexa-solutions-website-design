@@ -2057,3 +2057,57 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Persona Feedback Toast & Consultation UI Elements
+   ========================================================================== */
+.persona-feedback-toast {
+  display: none;
+  background: rgba(15, 27, 59, 0.95);
+  border: 1px solid var(--accent-blue);
+  color: #93c5fd;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  text-align: center;
+  margin: 12px auto 0 auto;
+  max-width: 600px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.consult-form-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Direction Highlight */
+.card-highlight {
+  animation: card-pulse-glow 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes card-pulse-glow {
+  0% {
+    box-shadow: 0 0 0 2px var(--accent-cyan), 0 0 35px rgba(6, 182, 212, 0.6);
+    border-color: var(--accent-cyan);
+    transform: translateY(-4px);
+  }
+  70% {
+    box-shadow: 0 0 0 2px var(--accent-cyan), 0 0 25px rgba(6, 182, 212, 0.4);
+    border-color: var(--accent-cyan);
+    transform: translateY(-4px);
+  }
+  100% {
+    box-shadow: var(--shadow-sm);
+    border-color: var(--border-glass);
+    transform: translateY(0);
+  }
+}
+
+

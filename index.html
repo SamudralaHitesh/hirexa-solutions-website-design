@@ -15,7 +15,7 @@
   <!-- Ambient Glowing Background Effect -->
   <div class="ambient-glow"></div>
 
-  <!-- 1. Top Persona Switcher Bar (Issue #9 & #11) -->
+  <!-- 1. Top Persona Switcher Bar (Issue #9: Audience Paths Separated) -->
   <aside class="top-persona-bar" aria-label="Audience Navigator">
     <div class="container top-persona-inner">
       <div class="persona-switchers">
@@ -29,12 +29,17 @@
           <span class="status-dot"></span>
           <span id="global-live-clock">Loading London HQ Time...</span>
         </div>
-        <a href="#request-rfp" class="proof-link" style="color: #93c5fd; font-weight: 600;">Direct RFP Hotline &rarr;</a>
+        <a href="#consultation" class="proof-link" style="color: #93c5fd; font-weight: 600;">Schedule Strategy Call &rarr;</a>
       </div>
     </div>
   </aside>
 
-  <!-- 2. Sticky Header & Consolidated Mega-Menu (Issues #1, #2, #3, #9) -->
+  <!-- Interactive Persona Feedback Banner -->
+  <div class="container">
+    <div class="persona-feedback-toast" id="persona-feedback-toast"></div>
+  </div>
+
+  <!-- 2. Sticky Header & Consolidated Mega-Menu (Issues #1 & #2: Consolidated 3 Pillars) -->
   <header class="site-header">
     <div class="container">
       <nav class="navbar" aria-label="Main Navigation">
@@ -46,11 +51,11 @@
           </div>
         </a>
 
-        <!-- Consolidated Navigation Menu -->
+        <!-- Consolidated 3-Pillar Navigation Menu -->
         <ul class="nav-menu">
           <!-- Pillar 1: Talent Solutions -->
           <li class="nav-item">
-            <a href="#services-hub" class="nav-link">
+            <a href="#services-hub" class="nav-link" data-target-pillar="talent">
               Talent Solutions
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </a>
@@ -58,37 +63,37 @@
               <div class="mega-grid">
                 <div>
                   <div class="mega-col-header">On-Demand Talent</div>
-                  <a href="#services-hub" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="talent" data-target-card="card-contract-staffing">
                     <div class="mega-card-title">Contract & Contingent Staffing <span>&rarr;</span></div>
                     <div class="mega-card-desc">Rapid deployment of verified tech engineers within 48 hours.</div>
                   </a>
-                  <a href="#services-hub" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="talent" data-target-card="card-fte-placement">
                     <div class="mega-card-title">Permanent & FTE Placements <span>&rarr;</span></div>
                     <div class="mega-card-desc">Direct hire talent acquisition with 90-day retention guarantee.</div>
                   </a>
                 </div>
                 <div>
                   <div class="mega-col-header">Executive & Intelligence</div>
-                  <a href="#services-hub" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="talent" data-target-card="card-exec-search">
                     <div class="mega-card-title">Executive Search <span>&rarr;</span></div>
                     <div class="mega-card-desc">C-suite, VP, and Director level confidential headhunting.</div>
                   </a>
-                  <a href="#services-hub" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="talent" data-target-card="card-talent-research">
                     <div class="mega-card-title">Talent Market Research <span>&rarr;</span></div>
                     <div class="mega-card-desc">Compensation benchmarking, talent heatmaps, and hiring analytics.</div>
                   </a>
                 </div>
               </div>
               <div class="mega-footer-action">
-                <span>Looking to compare staffing models?</span>
-                <a href="#comparison-matrix" class="proof-link">View Model Comparison Table &rarr;</a>
+                <span>Looking for immediate talent deployment?</span>
+                <a href="#consultation" class="proof-link">Talk to Talent Partner &rarr;</a>
               </div>
             </div>
           </li>
 
           <!-- Pillar 2: Enterprise Scaling & GCC -->
           <li class="nav-item">
-            <a href="#gcc-solutions" class="nav-link">
+            <a href="#services-hub" class="nav-link" data-target-pillar="gcc">
               Enterprise Scaling & GCC
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </a>
@@ -96,37 +101,37 @@
               <div class="mega-grid">
                 <div>
                   <div class="mega-col-header">Offshore Hubs</div>
-                  <a href="#gcc-solutions" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="gcc" data-target-card="card-gcc-bot">
                     <div class="mega-card-title">GCC Build-Operate-Transfer (BOT) <span>&rarr;</span></div>
                     <div class="mega-card-desc">Establish dedicated innovation centers in India & Poland.</div>
                   </a>
-                  <a href="#gcc-solutions" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="gcc" data-target-card="card-rpo">
                     <div class="mega-card-title">Enterprise RPO <span>&rarr;</span></div>
                     <div class="mega-card-desc">End-to-end recruitment process outsourcing for volume scale.</div>
                   </a>
                 </div>
                 <div>
                   <div class="mega-col-header">Global Mobility</div>
-                  <a href="#gcc-solutions" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="gcc" data-target-card="card-mobility">
                     <div class="mega-card-title">Global Mobility & Visas <span>&rarr;</span></div>
                     <div class="mega-card-desc">Cross-border relocation, legal compliance, and tax handling.</div>
                   </a>
-                  <a href="#gcc-solutions" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="gcc" data-target-card="card-payroll">
                     <div class="mega-card-title">Multi-Country Payroll & EOR <span>&rarr;</span></div>
                     <div class="mega-card-desc">Compliant payroll execution across 8+ international entities.</div>
                   </a>
                 </div>
               </div>
               <div class="mega-footer-action">
-                <span>Need a 60-day offshore timeline?</span>
-                <a href="#gcc-roadmap" class="proof-link">Explore GCC BOT Roadmap &rarr;</a>
+                <span>Planning an offshore GCC in India or Poland?</span>
+                <a href="#consultation" class="proof-link">Request GCC Brief &rarr;</a>
               </div>
             </div>
           </li>
 
           <!-- Pillar 3: Digital & Software Engineering -->
           <li class="nav-item">
-            <a href="#software-services" class="nav-link">
+            <a href="#services-hub" class="nav-link" data-target-pillar="software">
               Software Services
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </a>
@@ -134,47 +139,47 @@
               <div class="mega-grid">
                 <div>
                   <div class="mega-col-header">Engineering Practices</div>
-                  <a href="#software-services" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="software" data-target-card="card-cloud">
                     <div class="mega-card-title">Cloud Native & Microservices <span>&rarr;</span></div>
                     <div class="mega-card-desc">AWS, Azure, Kubernetes, and serverless architectures.</div>
                   </a>
-                  <a href="#software-services" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="software" data-target-card="card-ai-rpa">
                     <div class="mega-card-title">Data Engineering & AI/RPA <span>&rarr;</span></div>
-                    <div class="mega-card-desc">LLM workflows, predictive models, and UiPath automation.</div>
+                    <div class="mega-card-desc">LLM workflows, predictive models, and automation.</div>
                   </a>
                 </div>
                 <div>
                   <div class="mega-col-header">Product & Quality</div>
-                  <a href="#software-services" class="mega-card-link">
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="software" data-target-card="card-uiux">
                     <div class="mega-card-title">UI/UX & Product Design <span>&rarr;</span></div>
                     <div class="mega-card-desc">Design systems, Figma wireframing, and user research.</div>
                   </a>
-                  <a href="#case-studies" class="mega-card-link">
-                    <div class="mega-card-title">Verified Case Studies (STAR) <span>&rarr;</span></div>
-                    <div class="mega-card-desc">Real problem-solution client outcomes in Fintech & Healthcare.</div>
+                  <a href="#services-hub" class="mega-card-link" data-target-pillar="software" data-target-card="card-custom-software">
+                    <div class="mega-card-title">Custom Software Engineering <span>&rarr;</span></div>
+                    <div class="mega-card-desc">Full-cycle product engineering and legacy modernization.</div>
                   </a>
                 </div>
               </div>
             </div>
           </li>
 
-          <li class="nav-item"><a href="#careers-portal" class="nav-link">Careers & Jobs</a></li>
-          <li class="nav-item"><a href="#global-offices" class="nav-link">Global Footprint</a></li>
+          <li class="nav-item"><a href="#solution-wizard" class="nav-link">Solution Finder</a></li>
+          <li class="nav-item"><a href="#consultation" class="nav-link">Contact</a></li>
         </ul>
 
-        <!-- Right Quick Actions (Issue #3) -->
+        <!-- Right Quick Actions -->
         <div class="nav-actions">
           <button class="quick-wizard-btn" id="nav-wizard-trigger" onclick="document.getElementById('solution-wizard').scrollIntoView({behavior:'smooth'})">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
             Solution Finder
           </button>
-          <a href="#request-rfp" class="btn btn-primary btn-sm" id="nav-cta-rfp">Submit Hiring RFP</a>
+          <a href="#consultation" class="btn btn-primary btn-sm" id="nav-cta-rfp">Get in Touch</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- 3. High-Impact Hero Section (Issues #1, #3, #9, #13) -->
+  <!-- 3. High-Impact Hero Section -->
   <section class="hero-section" id="hero">
     <div class="container">
       <div class="hero-grid">
@@ -190,42 +195,18 @@
             Hirexa connects global enterprises with top 2% engineering talent, operates turnkey Build-Operate-Transfer (BOT) Global Capability Centers in India & Europe, and engineers robust enterprise software.
           </p>
           <div class="hero-cta-group">
-            <a href="#request-rfp" class="btn btn-primary" id="hero-btn-hire">
+            <a href="#consultation" class="btn btn-primary" id="hero-btn-hire">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              Hire Talent / Submit RFP
+              Schedule Strategy Consultation
             </a>
-            <a href="#software-services" class="btn btn-secondary" id="hero-btn-software">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Explore Software Services
+            <a href="#solution-wizard" class="btn btn-secondary" id="hero-btn-wizard">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              Try Solution Finder
             </a>
           </div>
-          <a href="#careers-portal" class="hero-candidate-link" id="hero-candidate-link">
-            <span>Are you a tech professional? Explore 150+ live global roles</span>
+          <div class="hero-candidate-link" id="careers-path-info">
+            <span>Are you a tech professional? Explore global engineering opportunities with Hirexa</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-
-          <!-- Connected Proof Points Bar (Issue #13) -->
-          <div class="hero-proof-bar">
-            <div class="proof-item">
-              <span class="proof-number">500<span>+</span></span>
-              <span class="proof-label">Enterprise Engineers Deployed</span>
-              <a href="#case-studies" class="proof-link">View Case Studies &rarr;</a>
-            </div>
-            <div class="proof-item">
-              <span class="proof-number">8</span>
-              <span class="proof-label">Global Delivery Hubs</span>
-              <a href="#global-offices" class="proof-link">Explore Map &rarr;</a>
-            </div>
-            <div class="proof-item">
-              <span class="proof-number">98.4<span>%</span></span>
-              <span class="proof-label">Annual Client Retention</span>
-              <a href="#comparison-matrix" class="proof-link">Compare Models &rarr;</a>
-            </div>
-            <div class="proof-item">
-              <span class="proof-number">48<span>h</span></span>
-              <span class="proof-label">Average Shortlist SLA</span>
-              <a href="#request-rfp" class="proof-link">Test Our Speed &rarr;</a>
-            </div>
           </div>
         </div>
 
@@ -238,7 +219,7 @@
                 <h5>Turnkey GCC Deployment Active</h5>
                 <p>Bangalore & Warsaw Tech Pods Online</p>
               </div>
-              <span class="badge-sla-tag">48h SLA Active</span>
+              <span class="badge-sla-tag">London HQ Live</span>
             </div>
           </div>
         </div>
@@ -246,7 +227,7 @@
     </div>
   </section>
 
-  <!-- 4. Interactive "Which Service Do You Need?" Wizard (Issues #1, #2, #15) -->
+  <!-- 4. Interactive "Which Service Do You Need?" Wizard (Issues #1 & #2: Guided Selector) -->
   <section class="wizard-section" id="solution-wizard">
     <div class="container">
       <div class="section-header">
@@ -279,17 +260,17 @@
           <div class="wizard-options-grid">
             <div class="wizard-choice-card selected" data-choice-key="goal" data-choice-val="talent">
               <span class="choice-icon">⚡</span>
-              <div class="choice-title">Specialised Tech Staffing</div>
+              <div class="choice-title">Specialised Tech Staffing (Pillar 1)</div>
               <div class="choice-desc">Need immediate individual engineers or specialized tech contract pods within 48–72 hours.</div>
             </div>
             <div class="wizard-choice-card" data-choice-key="goal" data-choice-val="gcc">
               <span class="choice-icon">🌐</span>
-              <div class="choice-title">Set Up an Offshore GCC</div>
+              <div class="choice-title">Set Up an Offshore GCC (Pillar 2)</div>
               <div class="choice-desc">Establish a dedicated, branded offshore capability center (BOT) in India or Eastern Europe.</div>
             </div>
             <div class="wizard-choice-card" data-choice-key="goal" data-choice-val="software">
               <span class="choice-icon">💻</span>
-              <div class="choice-title">Outsource Software Project</div>
+              <div class="choice-title">Outsource Software Project (Pillar 3)</div>
               <div class="choice-desc">Require an end-to-end engineering team to build, modernize, or maintain a digital product.</div>
             </div>
           </div>
@@ -322,12 +303,12 @@
         <div class="wizard-step-pane" data-step-pane="3">
           <div class="wizard-result-card">
             <div>
-              <div class="result-badge" id="wizard-rec-badge">Recommended Engagement Model</div>
+              <div class="result-badge" id="wizard-rec-badge">Recommended Engagement Model: Specialised Tech Staffing</div>
               <h3 class="result-title" id="wizard-rec-title">Agile Contingent & FTE Engineering Pods</h3>
-              <p class="result-desc" id="wizard-rec-desc">Hirexa’s specialized tech talent network provides pre-vetted engineers shortlisted within 48 hours, fully compliant with regional payroll and IP protections.</p>
+              <p class="result-desc" id="wizard-rec-desc">Hirexa’s specialized tech talent network provides pre-screened individual engineers and agile pods shortlisted within 48 hours, fully compliant with regional employment laws.</p>
             </div>
             <div>
-              <a href="#request-rfp" class="btn btn-primary" id="wizard-rec-cta">Book Consultation</a>
+              <a href="#consultation" class="btn btn-primary" id="wizard-rec-cta">Book Consultation</a>
             </div>
           </div>
         </div>
@@ -335,18 +316,18 @@
         <!-- Wizard Navigation Buttons -->
         <div class="wizard-actions">
           <button class="btn btn-secondary btn-sm" id="wizard-prev-btn" style="visibility: hidden;">&larr; Back</button>
-          <button class="btn btn-primary btn-sm" id="wizard-next-btn">Next: Select Scale &rarr;</button>
+          <button class="btn btn-primary btn-sm" id="wizard-next-btn">Next: Select Scope &rarr;</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. Consolidated Services Hub & Comparison Matrix (Issues #1, #2, #12) -->
+  <!-- 5. Consolidated 3 Strategic Pillars Portfolio (Issue #1: Consolidated Offerings) -->
   <section class="services-hub-section" id="services-hub">
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Comprehensive Solutions Portfolio</span>
-        <h2 class="section-title">The Three Pillars of Global Growth</h2>
+        <h2 class="section-title">The Three Pillars of Global Tech Growth</h2>
         <p class="section-desc">We consolidated our services into three unified practices so your leadership team can easily navigate from short-term staffing to global offshore centers.</p>
       </div>
 
@@ -354,7 +335,7 @@
       <div class="pillar-tabs">
         <button class="pillar-tab-btn active" data-pillar="talent">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          Pillar 1: Talent & Staffing
+          Pillar 1: Talent Solutions
         </button>
         <button class="pillar-tab-btn" data-pillar="gcc">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -369,49 +350,49 @@
       <!-- Pillar 1 Content: Talent -->
       <div class="pillar-panel active" id="pillar-talent">
         <div class="services-bento-grid">
-          <div class="service-card">
+          <div class="service-card" id="card-contract-staffing">
             <div class="service-header-row">
               <div class="service-icon-box">⚡</div>
-              <span class="service-tag-pill">48h Deployment</span>
+              <span class="service-tag-pill">48h SLA</span>
             </div>
             <h3 class="service-card-title">Contract & Contingent Staffing</h3>
-            <p class="service-card-desc">Scale your engineering velocity instantly. Hire pre-vetted senior software engineers, cloud architects, and data scientists on flexible contracts.</p>
+            <p class="service-card-desc">Scale engineering velocity instantly. Hire pre-screened senior software developers, cloud architects, and data engineers on agile contracts.</p>
             <ul class="service-feature-list">
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Pre-screened technical assessments</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Zero employer liability or payroll overhead</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Seamless extension or conversion to FTE</li>
             </ul>
-            <a href="#request-rfp" class="btn btn-secondary btn-sm" onclick="openRfpModalWithSelection({goal:'talent'})">Hire Contract Talent &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Inquire for Contract Talent &rarr;</a>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" id="card-fte-placement">
             <div class="service-header-row">
               <div class="service-icon-box">🎯</div>
               <span class="service-tag-pill">Direct Hire</span>
             </div>
             <h3 class="service-card-title">Permanent FTE Placements</h3>
-            <p class="service-card-desc">Build your core foundation with high-caliber permanent talent aligned with your culture, values, and long-term product vision.</p>
+            <p class="service-card-desc">Build your core foundation with permanent talent aligned with your culture, values, and long-term product roadmap.</p>
             <ul class="service-feature-list">
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Rigorous culture-fit & behavioral screening</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>90-day candidate retention replacement guarantee</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Complete background and credential verification</li>
             </ul>
-            <a href="#request-rfp" class="btn btn-secondary btn-sm" onclick="openRfpModalWithSelection({goal:'talent'})">Hire Permanent Staff &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Inquire for FTE Staff &rarr;</a>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" id="card-exec-search">
             <div class="service-header-row">
               <div class="service-icon-box">👑</div>
-              <span class="service-tag-pill">C-Suite & VP</span>
+              <span class="service-tag-pill">Executive Search</span>
             </div>
-            <h3 class="service-card-title">Executive Search & Market Intelligence</h3>
-            <p class="service-card-desc">Confidential retained search for VP of Engineering, CTO, and Product Leadership, backed by deep compensation benchmarking data.</p>
+            <h3 class="service-card-title">Executive Search & Talent Intelligence</h3>
+            <p class="service-card-desc">Confidential retained search for VP of Engineering, CTO, and Product Leadership, backed by market compensation data.</p>
             <ul class="service-feature-list">
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Confidential headhunting & mapping</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Global compensation & equity benchmarking</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Board-level advisor placement</li>
             </ul>
-            <a href="#request-rfp" class="btn btn-secondary btn-sm" onclick="openRfpModalWithSelection({goal:'talent'})">Request Executive Brief &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Request Executive Brief &rarr;</a>
           </div>
         </div>
       </div>
@@ -419,934 +400,172 @@
       <!-- Pillar 2 Content: Enterprise GCC -->
       <div class="pillar-panel" id="pillar-gcc">
         <div class="services-bento-grid">
-          <div class="service-card">
+          <div class="service-card" id="card-gcc-bot">
             <div class="service-header-row">
               <div class="service-icon-box">🏛️</div>
               <span class="service-tag-pill">Turnkey BOT</span>
             </div>
             <h3 class="service-card-title">GCC Build-Operate-Transfer (BOT)</h3>
-            <p class="service-card-desc">Establish your captive innovation center in Bangalore, Hyderabad, or Warsaw. We build the infrastructure, recruit the team, operate compliance, and transfer 100% equity to you.</p>
+            <p class="service-card-desc">Establish your captive innovation center in Bangalore, Hyderabad, or Warsaw. We build the infrastructure, recruit the team, operate compliance, and transfer equity to you.</p>
             <ul class="service-feature-list">
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Complete legal entity setup & local taxation</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>State-of-the-art secure IT facility</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Seamless asset and payroll transfer at Month 18-24</li>
             </ul>
-            <a href="#gcc-roadmap" class="btn btn-secondary btn-sm">Explore GCC Roadmap &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Consult on GCC &rarr;</a>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" id="card-rpo">
             <div class="service-header-row">
               <div class="service-icon-box">📊</div>
-              <span class="service-tag-pill">High Volume</span>
+              <span class="service-tag-pill">Volume RPO</span>
             </div>
             <h3 class="service-card-title">Recruitment Process Outsourcing (RPO)</h3>
             <p class="service-card-desc">Embed an elite Hirexa talent squad directly into your HR operations. We handle sourcing, candidate marketing, interviews, and offer management under your brand.</p>
             <ul class="service-feature-list">
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>40% reduction in average cost-per-hire</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Dedicated ATS integration & analytics reporting</li>
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Scalable hiring team capacity that flexes on-demand</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Scalable hiring team capacity</li>
             </ul>
-            <a href="#request-rfp" class="btn btn-secondary btn-sm" onclick="openRfpModalWithSelection({goal:'rpo'})">Consult on RPO &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Consult on RPO &rarr;</a>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" id="card-mobility">
             <div class="service-header-row">
               <div class="service-icon-box">✈️</div>
-              <span class="service-tag-pill">Global Compliance</span>
+              <span class="service-tag-pill">EOR Compliance</span>
             </div>
             <h3 class="service-card-title">Global Mobility & Employer of Record</h3>
-            <p class="service-card-desc">Expand into 8+ countries without registering local corporate entities. Hirexa manages local labor law, tax withholdings, visas, and relocation logistics seamlessly.</p>
+            <p class="service-card-desc">Expand into international markets without registering local corporate entities. Hirexa manages local labor law, tax withholdings, visas, and relocation logistics seamlessly.</p>
             <ul class="service-feature-list">
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>US, UK, Germany, Poland & India coverage</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Coverage across US, UK, Germany, Poland & India</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Work visa & cross-border relocation management</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>100% compliant multi-currency payroll processing</li>
             </ul>
-            <a href="#global-offices" class="btn btn-secondary btn-sm">View Supported Regions &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Explore Mobility &rarr;</a>
           </div>
         </div>
       </div>
 
-      <!-- Pillar 3 Content: Digital & Software Services -->
+      <!-- Pillar 3 Content: Software Engineering -->
       <div class="pillar-panel" id="pillar-software">
         <div class="services-bento-grid">
-          <div class="service-card">
+          <div class="service-card" id="card-cloud">
             <div class="service-header-row">
               <div class="service-icon-box">☁️</div>
-              <span class="service-tag-pill">Cloud & Core</span>
+              <span class="service-tag-pill">Cloud Engineering</span>
             </div>
             <h3 class="service-card-title">Cloud Native & Microservices</h3>
             <p class="service-card-desc">Design and engineer resilient enterprise architectures with AWS, Azure, GCP, Kubernetes, and event-driven Apache Kafka pipelines.</p>
             <ul class="service-feature-list">
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>99.99% high-availability SLA architectures</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>High-availability SLA architectures</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Monolith-to-microservices modernization</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Automated CI/CD pipelines & Terraform IaC</li>
             </ul>
-            <a href="#case-studies" class="btn btn-secondary btn-sm">Read Cloud Case Study &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Discuss Cloud Architecture &rarr;</a>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" id="card-ai-rpa">
             <div class="service-header-row">
               <div class="service-icon-box">🤖</div>
-              <span class="service-tag-pill">AI & Automation</span>
+              <span class="service-tag-pill">Data & Automation</span>
             </div>
             <h3 class="service-card-title">Data Engineering & AI/RPA</h3>
             <p class="service-card-desc">Unleash business intelligence through automated Snowflake/Databricks data warehouses, production LLM systems, and UiPath automation.</p>
             <ul class="service-feature-list">
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Automated RPA bots for finance and payroll</li>
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Custom LLM fine-tuning & RAG search</li>
-              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Real-time analytics dashboards & telemetry</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Custom LLM workflows & RAG search</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Real-time analytics dashboards</li>
             </ul>
-            <a href="#case-studies" class="btn btn-secondary btn-sm">Read RPA Case Study &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Discuss AI & Automation &rarr;</a>
           </div>
 
-          <div class="service-card">
+          <div class="service-card" id="card-uiux">
             <div class="service-header-row">
               <div class="service-icon-box">🎨</div>
-              <span class="service-tag-pill">Design & Mobile</span>
+              <span class="service-tag-pill">Product & UI/UX</span>
             </div>
             <h3 class="service-card-title">UI/UX & Digital Product Design</h3>
-            <p class="service-card-desc">Craft human-centric digital experiences with Figma design systems, cross-platform mobile apps (Flutter/React Native), and rigorous usability audits.</p>
+            <p class="service-card-desc">Craft human-centric digital experiences with Figma design systems, cross-platform mobile apps, and rigorous usability audits.</p>
             <ul class="service-feature-list">
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Enterprise design systems with token libraries</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Interactive rapid Figma prototyping</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>WCAG 2.1 AA accessibility compliance</li>
             </ul>
-            <a href="#case-studies" class="btn btn-secondary btn-sm">Read Mobile Case Study &rarr;</a>
+            <a href="#consultation" class="btn btn-secondary btn-sm">Discuss Product Design &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Model Comparison Table (Issues #2, #12) -->
-  <section class="comparison-section" id="comparison-matrix">
+  <!-- 6. Strategic Consultation Booking Section -->
+  <section class="consultation-section" id="consultation" style="padding: 80px 0; background: var(--bg-primary);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Strategic Evaluation</span>
-        <h2 class="section-title">Hiring & Engineering Models Compared</h2>
-        <p class="section-desc">Evaluate which engagement model aligns best with your delivery timelines, budget structure, and IP ownership criteria.</p>
+        <span class="section-tag">Direct Practice Engagement</span>
+        <h2 class="section-title">Schedule a Strategic Consultation</h2>
+        <p class="section-desc">Connect directly with our practice leaders across London, Bangalore, and San Francisco.</p>
       </div>
 
-      <div class="comparison-table-wrapper">
-        <table class="comparison-table">
-          <thead>
-            <tr>
-              <th>Engagement Model</th>
-              <th>Deployment Speed</th>
-              <th>Cost Structure</th>
-              <th>IP & Code Ownership</th>
-              <th>Management Overhead</th>
-              <th>Recommended For</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <span class="model-name">Contract Staffing</span>
-                <span class="model-sub">Specialist backfills</span>
-              </td>
-              <td><span style="color:var(--accent-emerald); font-weight:700;">48 – 72 Hours</span></td>
-              <td>Hourly / Monthly Rate</td>
-              <td>100% Client Owned</td>
-              <td>Low (Hirexa handles HR & Payroll)</td>
-              <td>Immediate project sprints & tech gaps</td>
-            </tr>
-            <tr>
-              <td>
-                <span class="model-name">Permanent FTE Placement</span>
-                <span class="model-sub">Core workforce hiring</span>
-              </td>
-              <td>2 – 4 Weeks</td>
-              <td>One-time Placement Fee</td>
-              <td>100% Client Owned</td>
-              <td>Direct Client Management</td>
-              <td>Key strategic leaders & long-term staff</td>
-            </tr>
-            <tr>
-              <td>
-                <span class="model-name">Enterprise RPO</span>
-                <span class="model-sub">Recruitment Process Outsourcing</span>
-              </td>
-              <td>10 – 14 Days Setup</td>
-              <td>Retainer + SLA Milestones</td>
-              <td>Internal talent pipeline</td>
-              <td>Managed by Embedded Hirexa Lead</td>
-              <td>Hiring 30+ roles/year across divisions</td>
-            </tr>
-            <tr>
-              <td>
-                <span class="model-name">GCC Build-Operate-Transfer</span>
-                <span class="model-sub">Offshore Captive Hub</span>
-              </td>
-              <td>60 Days to Launch</td>
-              <td>Transparent Cost-Plus</td>
-              <td>100% Transferred Equity</td>
-              <td>Operated by Hirexa, Directed by You</td>
-              <td>Scaling 25–150+ engineers offshore</td>
-            </tr>
-            <tr>
-              <td>
-                <span class="model-name">Dedicated Software Team</span>
-                <span class="model-sub">Turnkey product engineering</span>
-              </td>
-              <td>1 – 2 Weeks</td>
-              <td>Sprint / Milestone-based</td>
-              <td>100% Client Owned IP</td>
-              <td>Hirexa Delivery Scrum Master</td>
-              <td>Greenfield builds & modernization</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- GCC 60-Day Visual Roadmap (Issue #12) -->
-      <div class="gcc-roadmap-box" id="gcc-roadmap">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
-          <div>
-            <span class="section-tag">Turnkey Execution Blueprint</span>
-            <h3 style="font-size:1.6rem; color:#fff;">How Hirexa Builds Your GCC in 60 Days</h3>
-          </div>
-          <a href="#request-rfp" class="btn btn-outline-cyan btn-sm">Request GCC Feasibility Report &rarr;</a>
-        </div>
-
-        <div class="gcc-roadmap-grid">
-          <div class="gcc-stage-card">
-            <div class="stage-badge">Phase 1: Days 1–15</div>
-            <div class="stage-title">Blueprint & Jurisdiction</div>
-            <div class="stage-desc">Talent market analysis, salary benchmarking, entity selection in Bangalore or Warsaw, and IT security compliance sign-off.</div>
-          </div>
-          <div class="gcc-stage-card">
-            <div class="stage-badge">Phase 2: Days 16–30</div>
-            <div class="stage-title">Infrastructure & Entity BOT</div>
-            <div class="stage-desc">Turnkey high-security workspace, SOC2 compliant network, enterprise hardware delivery, and legal registration.</div>
-          </div>
-          <div class="gcc-stage-card">
-            <div class="stage-badge">Phase 3: Days 31–45</div>
-            <div class="stage-title">Core Talent Pod Ingestion</div>
-            <div class="stage-desc">Hirexa recruits and onboards the founding engineering leads, scrum masters, and senior developers into your culture.</div>
-          </div>
-          <div class="gcc-stage-card">
-            <div class="stage-badge">Phase 4: Days 46–60+</div>
-            <div class="stage-title">Live Sprints & Operational Transfer</div>
-            <div class="stage-desc">Teams contribute to production codebases. Full operational transfer of assets and contracts at the 18–24 month milestone.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. Software & Case Studies Gallery (Issues #6, #7, #8, #13) -->
-  <section class="software-showcase-section" id="case-studies">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Proven Enterprise Impact</span>
-        <h2 class="section-title">Case Studies: Verified Results Across Sectors</h2>
-        <p class="section-desc">Replacing generic placeholders with real engineering outcomes. Here is how Hirexa solved critical challenges for global enterprises using the STAR framework.</p>
-      </div>
-
-      <div class="case-studies-grid">
-        <!-- Case 1: Fintech Cloud Core -->
-        <div class="case-study-card">
-          <div class="case-img-wrap">
-            <img src="./assets/images/software_case.jpg" alt="Fintech Cloud Modernization" loading="lazy">
-            <span class="case-industry-tag">Fintech & Banking</span>
-          </div>
-          <div class="case-content">
-            <h3 class="case-title">Scaling Global Payment Gateway to 2.4M Daily Transactions</h3>
-            <div class="star-block">
-              <span class="star-label">Client Challenge</span>
-              <p class="star-text">A tier-1 fintech was facing 400ms latency spikes and database lockouts during peak payment surges.</p>
+      <div class="consult-form-box">
+        <form id="consultation-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="consult-name">Full Name *</label>
+              <input type="text" class="form-input" id="consult-name" placeholder="Sarah Jenkins" required>
             </div>
-            <div class="star-block">
-              <span class="star-label">Hirexa Solution</span>
-              <p class="star-text">Deployed a 9-person pod in 48 hours to re-architect transaction queues into distributed Kafka streams with AWS ECS microservices.</p>
-            </div>
-            <div class="tech-tags-group">
-              <span class="tech-tag">AWS ECS</span>
-              <span class="tech-tag">Kafka</span>
-              <span class="tech-tag">Go / Golang</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">Terraform</span>
-            </div>
-            <div class="case-roi-box">
-              <div>
-                <div class="roi-metric">99.999% Uptime</div>
-                <div class="roi-desc">Reduced API latency from 420ms to 48ms</div>
-              </div>
-              <a href="#request-rfp" class="proof-link">Discuss Architecture &rarr;</a>
+            <div class="form-group">
+              <label class="form-label" for="consult-email">Work Email *</label>
+              <input type="email" class="form-input" id="consult-email" placeholder="sarah@company.com" required>
             </div>
           </div>
-        </div>
 
-        <!-- Case 2: Healthcare Diagnostic AI Platform -->
-        <div class="case-study-card">
-          <div class="case-img-wrap">
-            <img src="./assets/images/global_team.jpg" alt="Healthcare AI Platform" loading="lazy">
-            <span class="case-industry-tag">HealthTech</span>
-          </div>
-          <div class="case-content">
-            <h3 class="case-title">Accelerating Oncology Diagnostic Image Pipeline</h3>
-            <div class="star-block">
-              <span class="star-label">Client Challenge</span>
-              <p class="star-text">European healthcare provider needed to ingest high-resolution MRI scans and generate automated pre-diagnosis annotations without violating HIPAA/GDPR.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="consult-service">Primary Capability of Interest</label>
+              <select class="form-select-styled" id="consult-service">
+                <option value="Specialised Tech Staffing">Pillar 1: Specialised Tech Staffing</option>
+                <option value="Permanent FTE Placement">Pillar 1: Permanent FTE Placement</option>
+                <option value="Executive Search">Pillar 1: Executive Search</option>
+                <option value="Global Capability Center (BOT)">Pillar 2: Global Capability Center (BOT in India/Poland)</option>
+                <option value="Enterprise RPO">Pillar 2: Enterprise RPO</option>
+                <option value="Custom Software & Cloud Engineering">Pillar 3: Custom Software & Cloud Engineering</option>
+              </select>
             </div>
-            <div class="star-block">
-              <span class="star-label">Hirexa Solution</span>
-              <p class="star-text">Built an encrypted computer vision pipeline on Azure Health Data Services with customized PyTorch models and zero patient data retention.</p>
-            </div>
-            <div class="tech-tags-group">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">PyTorch</span>
-              <span class="tech-tag">Azure Health</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Docker</span>
-            </div>
-            <div class="case-roi-box">
-              <div>
-                <div class="roi-metric">65% Faster Processing</div>
-                <div class="roi-desc">From 14 mins to 4.8 mins per scan with 99.2% accuracy</div>
-              </div>
-              <a href="#request-rfp" class="proof-link">Discuss Architecture &rarr;</a>
+            <div class="form-group">
+              <label class="form-label" for="consult-company">Company Name</label>
+              <input type="text" class="form-input" id="consult-company" placeholder="Acme Global Inc.">
             </div>
           </div>
-        </div>
 
-        <!-- Case 3: Supply Chain RPA Automation -->
-        <div class="case-study-card">
-          <div class="case-img-wrap">
-            <img src="./assets/images/software_case.jpg" alt="Supply Chain RPA Automation" loading="lazy">
-            <span class="case-industry-tag">Global Logistics</span>
+          <div class="form-group">
+            <label class="form-label" for="consult-message">Requirements Brief</label>
+            <textarea class="form-input" id="consult-message" rows="3" placeholder="Tell us about your headcount target, tech stack requirements, or project scope..."></textarea>
           </div>
-          <div class="case-content">
-            <h3 class="case-title">Autonomous Customs & Invoice Ingestion Engine</h3>
-            <div class="star-block">
-              <span class="star-label">Client Challenge</span>
-              <p class="star-text">Logistics giant was losing 1,400+ man-hours per month manually re-keying customs declaration documents across 12 European borders.</p>
-            </div>
-            <div class="star-block">
-              <span class="star-label">Hirexa Solution</span>
-              <p class="star-text">Implemented an intelligent document processing (IDP) RPA bot utilizing UiPath, Azure OCR, and automated SAP ERP sync.</p>
-            </div>
-            <div class="tech-tags-group">
-              <span class="tech-tag">UiPath</span>
-              <span class="tech-tag">Azure Form Recognizer</span>
-              <span class="tech-tag">SAP Integration</span>
-              <span class="tech-tag">Power Automate</span>
-            </div>
-            <div class="case-roi-box">
-              <div>
-                <div class="roi-metric">1,400 Hours Saved/Mo</div>
-                <div class="roi-desc">Error rate dropped from 4.8% to 0.08%</div>
-              </div>
-              <a href="#request-rfp" class="proof-link">Discuss Architecture &rarr;</a>
-            </div>
+
+          <div style="text-align: right; margin-top: 20px;">
+            <button type="submit" class="btn btn-primary" id="consult-submit-btn">
+              Submit Consultation Request &rarr;
+            </button>
           </div>
-        </div>
+        </form>
 
-        <!-- Case 4: Enterprise Retail Mobile Experience -->
-        <div class="case-study-card">
-          <div class="case-img-wrap">
-            <img src="./assets/images/hero_banner.jpg" alt="Retail Mobile Experience" loading="lazy">
-            <span class="case-industry-tag">Omnichannel Retail</span>
-          </div>
-          <div class="case-content">
-            <h3 class="case-title">Next-Gen Loyalty & Omnichannel Checkout App</h3>
-            <div class="star-block">
-              <span class="star-label">Client Challenge</span>
-              <p class="star-text">Retail chain with 300+ stores had separate web and in-store mobile apps causing checkout drop-offs and poor brand loyalty.</p>
-            </div>
-            <div class="star-block">
-              <span class="star-label">Hirexa Solution</span>
-              <p class="star-text">Engineered a single cross-platform Flutter application with offline-first barcode scanning and Apple/Google Pay in-aisle checkout.</p>
-            </div>
-            <div class="tech-tags-group">
-              <span class="tech-tag">Flutter</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">GraphQL</span>
-              <span class="tech-tag">Stripe Terminal</span>
-              <span class="tech-tag">Figma</span>
-            </div>
-            <div class="case-roi-box">
-              <div>
-                <div class="roi-metric">4.9 ★ Rating (400k+ Users)</div>
-                <div class="roi-desc">In-store mobile checkout surged by 34% in 6 months</div>
-              </div>
-              <a href="#request-rfp" class="proof-link">Discuss Architecture &rarr;</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. Intelligent Careers Portal & Live Job Board (Issues #4, #5) -->
-  <section class="careers-section" id="careers-portal">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Next-Gen Talent Experience</span>
-        <h2 class="section-title">Join High-Growth Global Tech Teams</h2>
-        <p class="section-desc">Search verified opportunities across Europe, the US, and India with transparent compensation bands and fast-track interview scheduling.</p>
-      </div>
-
-      <!-- Faceted Search Bar (Issue #4) -->
-      <div class="job-search-filter-bar">
-        <div class="search-input-wrap">
-          <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="job-search-input" placeholder="Search by role, skill (e.g. AWS, React, Python)...">
-        </div>
-
-        <select class="filter-select" id="job-dept-filter" aria-label="Department Filter">
-          <option value="all">All Departments</option>
-          <option value="Software Engineering">Software Engineering</option>
-          <option value="Cloud & Infrastructure">Cloud & Infrastructure</option>
-          <option value="Data & AI">Data & AI</option>
-          <option value="Product & Design">Product & Design</option>
-        </select>
-
-        <select class="filter-select" id="job-type-filter" aria-label="Work Style Filter">
-          <option value="all">All Work Styles</option>
-          <option value="Remote">Remote Only</option>
-          <option value="Hybrid">Hybrid</option>
-          <option value="On-site">On-site</option>
-        </select>
-
-        <button class="btn btn-outline-cyan btn-sm" onclick="openCandidateModal('General Talent Pool')">
-          Drop Your CV (General)
-        </button>
-      </div>
-
-      <!-- Results Count -->
-      <div class="job-results-count">
-        <span id="job-results-count-text">Loading live openings...</span>
-        <span style="font-size:0.8rem; color:var(--accent-emerald);">● Live Hiring Status Active</span>
-      </div>
-
-      <!-- Jobs List Container -->
-      <div class="jobs-list" id="jobs-list-container">
-        <!-- Rendered dynamically by app.js -->
-      </div>
-
-      <!-- Fast Track CV Drop Card (Issue #5) -->
-      <div class="fast-cv-drop-card">
-        <h3 style="font-size:1.35rem; color:#fff; margin-bottom:8px;">Don't see the exact role you're looking for?</h3>
-        <p style="color:var(--text-secondary); font-size:0.92rem; max-width:620px; margin:0 auto 18px auto;">
-          Our talent advisors match 40+ confidential executive and specialized developer roles each week that are never publicly listed. Submit your CV for confidential priority matching.
-        </p>
-        <button class="btn btn-primary btn-sm" onclick="openCandidateModal('Confidential Fast-Track Pool')">
-          Submit Confidential Profile &rarr;
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. Interactive Global Footprint & Office Locator (Issue #11) -->
-  <section class="global-offices-section" id="global-offices">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Global Presence & Entities</span>
-        <h2 class="section-title">8 Delivery Hubs Across 3 Continents</h2>
-        <p class="section-desc">Select a region to view local office addresses, active working hours, direct phones, and dedicated regional talent directors.</p>
-      </div>
-
-      <!-- Region Switcher -->
-      <div class="region-filter-tabs">
-        <button class="region-btn active" data-region="all">All Global Locations (8)</button>
-        <button class="region-btn" data-region="americas">North America (USA)</button>
-        <button class="region-btn" data-region="europe">Europe (UK, DE, PL, NL, BG, ES)</button>
-        <button class="region-btn" data-region="apac">India & APAC (Bangalore, Hyderabad, Pune)</button>
-      </div>
-
-      <!-- Interactive World Map Visual (SVG) -->
-      <div class="map-visual-container">
-        <svg class="svg-world-map" viewBox="0 0 1000 450" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Stylized World Map Grid Lines -->
-          <path d="M50 80 Q 250 50 450 80 T 850 80" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
-          <path d="M50 180 Q 250 150 450 180 T 850 180" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
-          <path d="M50 280 Q 250 250 450 280 T 850 280" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4"/>
-
-          <!-- Stylized Continent Outlines (Minimalist Geo Dots) -->
-          <!-- Americas -->
-          <circle cx="210" cy="140" r="45" fill="rgba(37,99,235,0.08)"/>
-          <circle cx="250" cy="280" r="40" fill="rgba(37,99,235,0.06)"/>
-          <!-- Europe -->
-          <circle cx="500" cy="120" r="40" fill="rgba(6,182,212,0.1)"/>
-          <!-- India / Asia -->
-          <circle cx="680" cy="180" r="50" fill="rgba(37,99,235,0.1)"/>
-
-          <!-- Interactive Office Hub Pins (Clickable) -->
-          <!-- USA (San Francisco) -->
-          <g class="map-hub-pin" data-country="usa">
-            <circle class="pulse" cx="190" cy="130" r="10" fill="rgba(56,189,248,0.4)"/>
-            <circle cx="190" cy="130" r="6" fill="#38bdf8"/>
-            <text x="190" y="115" fill="#f8fafc" font-size="11" font-weight="700" text-anchor="middle">USA (CA & NY)</text>
-          </g>
-
-          <!-- UK (London) -->
-          <g class="map-hub-pin" data-country="uk">
-            <circle class="pulse" cx="475" cy="105" r="10" fill="rgba(56,189,248,0.4)"/>
-            <circle cx="475" cy="105" r="6" fill="#38bdf8"/>
-            <text x="475" y="90" fill="#f8fafc" font-size="11" font-weight="700" text-anchor="middle">London HQ</text>
-          </g>
-
-          <!-- Germany (Frankfurt) -->
-          <g class="map-hub-pin" data-country="germany">
-            <circle class="pulse" cx="505" cy="115" r="10" fill="rgba(56,189,248,0.4)"/>
-            <circle cx="505" cy="115" r="6" fill="#38bdf8"/>
-            <text x="505" y="100" fill="#f8fafc" font-size="11" font-weight="700" text-anchor="middle">Germany</text>
-          </g>
-
-          <!-- Poland (Warsaw) -->
-          <g class="map-hub-pin" data-country="poland">
-            <circle class="pulse" cx="535" cy="110" r="10" fill="rgba(56,189,248,0.4)"/>
-            <circle cx="535" cy="110" r="6" fill="#38bdf8"/>
-            <text x="535" y="95" fill="#f8fafc" font-size="11" font-weight="700" text-anchor="middle">Poland</text>
-          </g>
-
-          <!-- India (Bangalore / Hyderabad) -->
-          <g class="map-hub-pin" data-country="india">
-            <circle class="pulse" cx="690" cy="195" r="12" fill="rgba(56,189,248,0.5)"/>
-            <circle cx="690" cy="195" r="7" fill="#38bdf8"/>
-            <text x="690" y="222" fill="#38bdf8" font-size="12" font-weight="800" text-anchor="middle">India Tech GCC Hubs</text>
-          </g>
-        </svg>
-      </div>
-
-      <!-- Offices Cards Grid -->
-      <div class="offices-grid">
-        <!-- United Kingdom -->
-        <div class="office-card" data-region="europe" data-country="uk">
-          <div class="office-top-row">
-            <div class="country-flag-name">🇬🇧 United Kingdom</div>
-            <div class="local-time-tag" data-timezone="Europe/London">--:-- GMT</div>
-          </div>
-          <div class="office-address">
-            <strong>London Global Headquarters</strong><br>
-            Level 28, 1 Canada Square, Canary Wharf, London E14 5AA
-          </div>
-          <div class="office-contact-links">
-            <a href="tel:+442079460912" class="office-contact-link">📞 +44 20 7946 0912</a>
-            <a href="mailto:uk@hirexasolutions.com" class="office-contact-link">✉️ uk@hirexasolutions.com</a>
-          </div>
-        </div>
-
-        <!-- United States -->
-        <div class="office-card" data-region="americas" data-country="usa">
-          <div class="office-top-row">
-            <div class="country-flag-name">🇺🇸 United States</div>
-            <div class="local-time-tag" data-timezone="America/Los_Angeles">--:-- PST</div>
-          </div>
-          <div class="office-address">
-            <strong>North America Practice</strong><br>
-            535 Mission St, 14th Floor, San Francisco, CA 94105
-          </div>
-          <div class="office-contact-links">
-            <a href="tel:+14158902400" class="office-contact-link">📞 +1 (415) 890-2400</a>
-            <a href="mailto:usa@hirexasolutions.com" class="office-contact-link">✉️ usa@hirexasolutions.com</a>
-          </div>
-        </div>
-
-        <!-- India -->
-        <div class="office-card" data-region="apac" data-country="india">
-          <div class="office-top-row">
-            <div class="country-flag-name">🇮🇳 India (APAC Hub)</div>
-            <div class="local-time-tag" data-timezone="Asia/Kolkata">--:-- IST</div>
-          </div>
-          <div class="office-address">
-            <strong>Bangalore GCC Campus & Software Lab</strong><br>
-            Outer Ring Road, Bellandur, Bengaluru, Karnataka 560103
-          </div>
-          <div class="office-contact-links">
-            <a href="tel:+918041235678" class="office-contact-link">📞 +91 80 4123 5678</a>
-            <a href="mailto:india@hirexasolutions.com" class="office-contact-link">✉️ india@hirexasolutions.com</a>
-          </div>
-        </div>
-
-        <!-- Germany -->
-        <div class="office-card" data-region="europe" data-country="germany">
-          <div class="office-top-row">
-            <div class="country-flag-name">🇩🇪 Germany</div>
-            <div class="local-time-tag" data-timezone="Europe/Berlin">--:-- CET</div>
-          </div>
-          <div class="office-address">
-            <strong>DACH Regional Delivery</strong><br>
-            Mainzer Landstraße 50, 60325 Frankfurt am Main
-          </div>
-          <div class="office-contact-links">
-            <a href="tel:+49691234567" class="office-contact-link">📞 +49 69 1234 567</a>
-            <a href="mailto:dach@hirexasolutions.com" class="office-contact-link">✉️ dach@hirexasolutions.com</a>
-          </div>
-        </div>
-
-        <!-- Poland -->
-        <div class="office-card" data-region="europe" data-country="poland">
-          <div class="office-top-row">
-            <div class="country-flag-name">🇵🇱 Poland</div>
-            <div class="local-time-tag" data-timezone="Europe/Warsaw">--:-- CET</div>
-          </div>
-          <div class="office-address">
-            <strong>CEE Engineering Hub</strong><br>
-            Rondo Daszyńskiego 1, 00-843 Warsaw
-          </div>
-          <div class="office-contact-links">
-            <a href="tel:+48221234567" class="office-contact-link">📞 +48 22 123 4567</a>
-            <a href="mailto:poland@hirexasolutions.com" class="office-contact-link">✉️ poland@hirexasolutions.com</a>
-          </div>
-        </div>
-
-        <!-- Netherlands, Spain & Bulgaria -->
-        <div class="office-card" data-region="europe" data-country="europe">
-          <div class="office-top-row">
-            <div class="country-flag-name">🇪🇺 Netherlands & Spain</div>
-            <div class="local-time-tag" data-timezone="Europe/Amsterdam">--:-- CET</div>
-          </div>
-          <div class="office-address">
-            <strong>Western Europe Mobility Office</strong><br>
-            Zuidas District, Amsterdam / Passeig de Gràcia, Barcelona
-          </div>
-          <div class="office-contact-links">
-            <a href="mailto:eu@hirexasolutions.com" class="office-contact-link">✉️ eu@hirexasolutions.com</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. Multi-Step Lead Qualification RFP Engine (Issues #3, #10, #15) -->
-  <section class="rfp-section" id="request-rfp">
-    <div class="container">
-      <div class="rfp-card-container">
-        <div class="rfp-info-pane">
-          <span class="section-tag">Direct Enterprise Funnel</span>
-          <h3>Submit Your Hiring Requirement or RFP</h3>
-          <p>
-            Whether you need 2 niche cloud architects or a 50-person captive GCC offshore center, our practice leaders will analyze your requirements and provide a detailed talent roadmap within 24 hours.
+        <div id="consult-success-state" style="display: none; text-align: center; padding: 30px 10px;">
+          <div style="font-size: 3rem; margin-bottom: 12px;">🎉</div>
+          <h3 style="color:#fff; margin-bottom: 8px;">Consultation Request Received!</h3>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom: 16px;">
+            Thank you for reaching out. A Hirexa practice leader will review your requirements and respond within 24 business hours.
           </p>
-
-          <ul class="rfp-value-props">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Guaranteed 48-Hour Shortlist</strong> for contingent & contract tech pods</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Compliant Legal & Payroll Handling</strong> across US, UK, EU, and India</span>
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Strict Non-Disclosure (NDA)</strong> and IP security guaranteed</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- The Dynamic Form -->
-        <div class="rfp-form-pane">
-          <form id="lead-rfp-form">
-            <!-- Step 1: Service Required -->
-            <div class="rfp-step active" data-rfp-step="1">
-              <h4 style="color:#fff; margin-bottom: 12px;">Step 1: What service are you seeking?</h4>
-              <div class="form-group">
-                <label class="form-label" for="rfp-service">Primary Capability</label>
-                <select class="form-select-styled" id="rfp-service">
-                  <option value="Specialised Tech Staffing">Specialised Tech Staffing (Contract / Pods)</option>
-                  <option value="Permanent FTE Placement">Permanent FTE Placement</option>
-                  <option value="Global Capability Center (BOT)">Global Capability Center (BOT in India/Poland)</option>
-                  <option value="Enterprise RPO">Enterprise RPO (Volume Recruiting)</option>
-                  <option value="Custom Software Engineering">Custom Software & Cloud Engineering</option>
-                  <option value="Global Mobility & Payroll">Global Mobility, Visas & EOR Payroll</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="rfp-volume">Target Scale / Team Size</label>
-                <select class="form-select-styled" id="rfp-volume">
-                  <option value="1-5">1 to 5 Specialists</option>
-                  <option value="5-20">5 to 20 Engineers (Squad)</option>
-                  <option value="20+">20+ Roles / Enterprise GCC Hub</option>
-                  <option value="Project Scope">Custom Software Project Scope</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Step 2: Tech & Timeline -->
-            <div class="rfp-step" data-rfp-step="2">
-              <h4 style="color:#fff; margin-bottom: 12px;">Step 2: Technical Domain & Target Start Date</h4>
-              <div class="form-group">
-                <label class="form-label" for="rfp-skills">Key Tech Stack or Job Titles Required</label>
-                <input type="text" class="form-input" id="rfp-skills" placeholder="e.g. React, Python, AWS, DevOps, Golang...">
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="rfp-timeline">Target Start Date</label>
-                  <select class="form-select-styled" id="rfp-timeline">
-                    <option value="Immediate (< 2 Weeks)">Immediate (&lt; 2 Weeks)</option>
-                    <option value="Within 30 Days">Within 30 Days</option>
-                    <option value="Next Quarter">Next Quarter</option>
-                    <option value="Planning / Exploring">Planning / Exploring Budget</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="rfp-location">Preferred Delivery Hub</label>
-                  <select class="form-select-styled" id="rfp-location">
-                    <option value="India (Bangalore/Hyd)">India (Bangalore / Hyderabad)</option>
-                    <option value="Europe (UK/Poland)">Europe (UK / Poland / Germany)</option>
-                    <option value="North America (USA)">North America (USA Remote/On-site)</option>
-                    <option value="Open to Recommendation">Open to Recommendation</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 3: Contact & Company Info -->
-            <div class="rfp-step" data-rfp-step="3">
-              <h4 style="color:#fff; margin-bottom: 12px;">Step 3: Where should we send the proposal?</h4>
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="rfp-name">Full Name *</label>
-                  <input type="text" class="form-input" id="rfp-name" placeholder="Sarah Jenkins" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="rfp-email">Work Email *</label>
-                  <input type="email" class="form-input" id="rfp-email" placeholder="sarah@enterprise.com" required>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="rfp-company">Company Name</label>
-                  <input type="text" class="form-input" id="rfp-company" placeholder="Acme Global Inc.">
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="rfp-phone">Phone Number</label>
-                  <input type="tel" class="form-input" id="rfp-phone" placeholder="+1 (555) 019-2834">
-                </div>
-              </div>
-            </div>
-
-            <!-- Confirmed Step -->
-            <div class="rfp-step" id="rfp-step-success">
-              <div style="text-align:center; padding: 24px 0;">
-                <div style="font-size: 3rem; margin-bottom: 12px;">🎉</div>
-                <h3 style="color:#fff; margin-bottom: 8px;">Hiring RFP Received Successfully!</h3>
-                <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom: 18px;">
-                  Your requirements have been routed to our Lead Engagement Partner. A tailored capability statement and candidate shortlist timeline will be sent to your work email within 24 hours.
-                </p>
-                <div class="badge-sla-tag" style="display:inline-block; font-size:0.85rem; padding:6px 16px;">
-                  SLA Active: 24-Hour Executive Callback
-                </div>
-              </div>
-            </div>
-
-            <!-- Form Navigation Buttons -->
-            <div style="display:flex; justify-content:space-between; margin-top: 24px;" id="rfp-nav-btns">
-              <button type="button" class="btn btn-secondary btn-sm" id="rfp-back-btn" style="visibility:hidden;">&larr; Back</button>
-              <button type="button" class="btn btn-primary" id="rfp-next-btn">Next Step &rarr;</button>
-              <button type="button" class="btn btn-primary" id="rfp-submit-btn" style="display:none;">Submit Hiring Requirement &rarr;</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11. FAQ Accordion (Issue #12) -->
-  <section class="faq-section" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Frequently Answered</span>
-        <h2 class="section-title">Clarifying Key Engagement Questions</h2>
-        <p class="section-desc">Replacing heavy walls of text with direct answers to your team’s most frequent operational inquiries.</p>
-      </div>
-
-      <div class="faq-list">
-        <div class="faq-item open">
-          <div class="faq-question">
-            <span>How fast can Hirexa deploy an engineering squad for a critical project?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            For individual contract engineers and tech specialists, candidate shortlists are delivered within 48 hours, with onboarding completed in under 5 business days. For full GCC innovation centers or custom software teams, our 60-day Build-Operate-Transfer roadmap guarantees full deployment within 8 weeks.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Who owns the Intellectual Property (IP) and code developed by Hirexa teams?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            100% of all intellectual property, source code, patents, and work products are assigned directly to your organization from Day 1. In our GCC Build-Operate-Transfer model, 100% of local entity equity and physical assets are transferred to you at the milestone date.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>How does Hirexa manage international payroll and compliance across multiple countries?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            Hirexa maintains registered corporate entities across the United States, United Kingdom, Poland, Germany, and India. We act as the Employer of Record (EOR), handling statutory benefits, local taxation, cross-border mobility visas, and currency conversion without exposing your firm to permanent establishment risks.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>What is the difference between Hirexa Staffing and Hirexa RPO?</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-          </div>
-          <div class="faq-answer">
-            Staffing fulfills immediate tactical hiring requisitions (1–5 roles) with pre-screened talent. Recruitment Process Outsourcing (RPO) embeds an entire dedicated talent acquisition department into your company to manage all hiring from job marketing to onboarding, ideal for organizations hiring 25+ engineers per year.
+          <div class="badge-sla-tag" style="display:inline-block; font-size:0.85rem; padding:6px 16px;">
+            SLA Active: 24-Hour Executive Callback
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12. Candidate Structured Application Modal (Issue #5) -->
-  <div class="modal-overlay" id="candidate-modal">
-    <div class="modal-window">
-      <button class="modal-close-btn" onclick="closeCandidateModal()">&times;</button>
-      <div style="margin-bottom: 20px;">
-        <span class="section-tag" style="margin-bottom: 6px;">Confidential Application</span>
-        <h3 style="font-size: 1.5rem; color:#fff;" id="candidate-modal-role">Senior Cloud Architect</h3>
-        <p style="color:var(--text-secondary); font-size:0.88rem;">Complete this structured form to fast-track your profile with our hiring partner.</p>
-      </div>
-
-      <!-- Hidden Role Input -->
-      <input type="hidden" id="candidate-role-hidden" value="">
-
-      <!-- Step 1: Resume & Core Info -->
-      <div class="form-step active" id="cand-step-1">
-        <!-- Drag & Drop Zone -->
-        <div class="resume-dropzone" id="resume-dropzone">
-          <div class="upload-icon">📄</div>
-          <p id="dropzone-text" style="color:#fff; font-size:0.9rem;">
-            <strong>Drag and drop your CV (PDF or DOCX)</strong> or click to browse
-          </p>
-          <span style="font-size:0.75rem; color:var(--text-muted);">Max file size: 10MB • Auto-parsing enabled</span>
-          <input type="file" id="resume-file-input" style="display:none;" accept=".pdf,.doc,.docx">
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="cand-name">Full Name *</label>
-            <input type="text" class="form-input" id="cand-name" placeholder="Alexander Wright" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cand-email">Email Address *</label>
-            <input type="email" class="form-input" id="cand-email" placeholder="alex@domain.com" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="cand-phone">Phone Number</label>
-            <input type="tel" class="form-input" id="cand-phone" placeholder="+44 7700 900123">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cand-linkedin">LinkedIn Profile URL</label>
-            <input type="url" class="form-input" id="cand-linkedin" placeholder="https://linkedin.com/in/username">
-          </div>
-        </div>
-
-        <div style="text-align:right; margin-top:16px;">
-          <button class="btn btn-primary btn-sm" id="cand-to-step-2">Continue to Qualifications &rarr;</button>
-        </div>
-      </div>
-
-      <!-- Step 2: Structured Qualifications -->
-      <div class="form-step" id="cand-step-2">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="cand-exp">Total Years of Experience</label>
-            <select class="form-select-styled" id="cand-exp">
-              <option value="2-4 Years">2 to 4 Years</option>
-              <option value="5-7 Years" selected>5 to 7 Years (Senior)</option>
-              <option value="8-12 Years">8 to 12 Years (Lead / Staff)</option>
-              <option value="12+ Years">12+ Years (Principal / Director)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cand-notice">Current Notice Period</label>
-            <select class="form-select-styled" id="cand-notice">
-              <option value="Immediate (< 7 Days)">Immediate (&lt; 7 Days)</option>
-              <option value="15 Days">15 Days</option>
-              <option value="30 Days" selected>30 Days</option>
-              <option value="60+ Days">60+ Days</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="cand-skills">Primary Technical Skills (Comma-separated)</label>
-          <input type="text" class="form-input" id="cand-skills" value="React, Node.js, TypeScript, AWS, Docker">
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="cand-work-auth">Work Authorization Status</label>
-            <select class="form-select-styled" id="cand-work-auth">
-              <option value="Citizen / Permanent Resident">Citizen / Permanent Resident</option>
-              <option value="Valid Work Visa">Valid Work Visa (No Sponsorship Needed)</option>
-              <option value="Requires Sponsorship">Requires Visa Sponsorship</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="cand-salary-exp">Expected Compensation</label>
-            <input type="text" class="form-input" id="cand-salary-exp" placeholder="e.g. £90,000 / $150,000">
-          </div>
-        </div>
-
-        <div style="display:flex; justify-content:space-between; margin-top:20px;">
-          <button class="btn btn-secondary btn-sm" id="cand-back-step-1">&larr; Back</button>
-          <button class="btn btn-primary" id="cand-submit-btn">Submit Application &rarr;</button>
-        </div>
-      </div>
-
-      <!-- Step 3: Success State -->
-      <div class="form-step" id="cand-step-success">
-        <div style="text-align:center; padding: 30px 10px;">
-          <div style="font-size: 3rem; margin-bottom: 12px;">✅</div>
-          <h3 style="color:#fff; margin-bottom: 6px;">Application Submitted Successfully!</h3>
-          <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom: 16px;">
-            Application Tracking ID: <strong id="cand-app-ref" style="color:var(--accent-cyan);">HX-942817</strong>
-          </p>
-          <p style="color:var(--text-secondary); font-size:0.85rem; max-width:440px; margin:0 auto 20px auto;">
-            Our talent acquisition specialist will review your profile against active client requisitions. You will receive an interview schedule update within 48 business hours.
-          </p>
-          <button class="btn btn-outline-cyan btn-sm" onclick="closeCandidateModal()">Close Window</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 13. Simulated Real-Time Funnel Analytics HUD (Issue #15) -->
-  <button class="analytics-hud-trigger" id="hud-trigger" aria-label="Toggle Lead Funnel Tracker HUD">
-    <span class="status-dot"></span>
-    Lead Funnel & CRM HUD
-  </button>
-
-  <div class="analytics-hud-modal" id="hud-modal">
-    <div class="hud-header">
-      <h5>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        Live Lead Tracking & GTM Dispatcher
-      </h5>
-      <button style="background:none; border:none; color:#fff; cursor:pointer;" id="hud-close-btn">&times;</button>
-    </div>
-    <p style="font-size:0.7rem; color:var(--text-muted); margin-bottom: 8px;">
-      Capturing end-to-end user journeys (Issue #15). Real-time stream of GA4 dataLayer events, UTM attribution & CRM payload triggers:
-    </p>
-    <div class="hud-log-stream" id="hud-log-stream">
-      <div class="hud-event-row">
-        <span class="hud-event-time">Init</span>
-        <span class="hud-event-name">session_start</span>: 
-        <span style="color:#94a3b8">utm_source=direct, visitor_intent=enterprise</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 14. SEO Taxonomy, Consolidated Sitemap & Footer (Issues #14, #15) -->
+  <!-- 7. Consolidated Footer & Sitemap -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -1367,48 +586,44 @@
         </div>
 
         <div class="footer-col">
-          <h5>Talent Solutions</h5>
+          <h5>Pillar 1: Talent Solutions</h5>
           <ul class="footer-links">
             <li><a href="#services-hub">Contract Tech Staffing</a></li>
             <li><a href="#services-hub">Permanent FTE Hiring</a></li>
             <li><a href="#services-hub">Executive Search</a></li>
             <li><a href="#services-hub">Talent Market Research</a></li>
-            <li><a href="#comparison-matrix">Model Comparison Table</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5>Enterprise & Software</h5>
+          <h5>Pillar 2: GCC & Scaling</h5>
           <ul class="footer-links">
-            <li><a href="#gcc-solutions">GCC Build-Operate-Transfer</a></li>
+            <li><a href="#services-hub">GCC Build-Operate-Transfer</a></li>
             <li><a href="#services-hub">Enterprise RPO Solutions</a></li>
-            <li><a href="#software-services">Cloud & Microservices</a></li>
-            <li><a href="#software-services">AI & RPA Automation</a></li>
-            <li><a href="#case-studies">STAR Client Case Studies</a></li>
+            <li><a href="#services-hub">Global Mobility & Visas</a></li>
+            <li><a href="#services-hub">Multi-Country EOR Payroll</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h5>Global Entities & Careers</h5>
+          <h5>Pillar 3: Software Services</h5>
           <ul class="footer-links">
-            <li><a href="#careers-portal">Live Job Board (150+ Roles)</a></li>
-            <li><a href="#global-offices">London Headquarters (UK)</a></li>
-            <li><a href="#global-offices">San Francisco Office (USA)</a></li>
-            <li><a href="#global-offices">Bangalore Tech Campus (India)</a></li>
-            <li><a href="#global-offices">Warsaw Engineering Hub (Poland)</a></li>
+            <li><a href="#services-hub">Cloud Native & Microservices</a></li>
+            <li><a href="#services-hub">Data Engineering & AI/RPA</a></li>
+            <li><a href="#services-hub">UI/UX & Product Design</a></li>
+            <li><a href="#solution-wizard">Solution Finder Wizard</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <div>
-          &copy; 2026 Hirexa Solutions Global. All rights reserved. 
-          <span style="margin-left:12px; color:var(--text-muted);">Content & 301 Redirect Consolidation Implemented.</span>
+          &copy; 2026 Hirexa Solutions Global. All rights reserved.
         </div>
         <div style="display:flex; gap:16px;">
           <a href="#" style="color:var(--text-muted); text-decoration:none;">Privacy Policy</a>
           <a href="#" style="color:var(--text-muted); text-decoration:none;">Terms of Engagement</a>
-          <a href="#" style="color:var(--text-muted); text-decoration:none;">Security & Compliance</a>
+          <a href="#consultation" style="color:var(--accent-cyan-light); text-decoration:none;">Contact Us &rarr;</a>
         </div>
       </div>
     </div>
